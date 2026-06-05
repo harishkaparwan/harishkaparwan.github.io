@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MCP AI Studio | Plugin Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="theme.css" />
+    <style>
+      .single-wrap {
+        max-width: 1060px;
+        margin: 0 auto;
+      }
+
+      .hero-compact {
+        margin-bottom: 30px;
+      }
+
+      .hero-compact h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      .section-card {
+        border-radius: 20px;
+        border: 1px solid var(--panel-border);
+        background: linear-gradient(160deg, var(--panel), rgba(8, 18, 44, 0.9));
+        box-shadow: 0 18px 42px rgba(2, 10, 30, 0.36);
+        padding: 22px;
+      }
+
+      .section-card h2 {
+        margin: 0 0 12px;
+        font-size: 1.45rem;
+        letter-spacing: -0.01em;
+      }
+
+      .section-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.48;
+      }
+
+      .checklist {
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .checklist li {
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      .checklist strong {
+        color: var(--text);
+      }
+
+      .checklist li::before {
+        content: "+ ";
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .code-box {
+        margin-top: 14px;
+        overflow-x: auto;
+      }
+
+      .settings-grid {
+        margin-top: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .settings-row {
+        border: 1px solid rgba(112, 149, 221, 0.24);
+        border-radius: 12px;
+        padding: 10px 12px;
+        background: rgba(8, 21, 50, 0.62);
+      }
+
+      .settings-row .k {
+        color: #dbedff;
+        font-weight: 700;
+        display: block;
+        font-size: 0.92rem;
+      }
+
+      .settings-row .v {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .cta-row a {
+        width: auto;
+        min-height: 44px;
+        padding: 0 14px;
+      }
+
+      .path-note {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 860px) {
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="site-wrap single-wrap">
+      <header class="site-header">
+        <div class="brand">MCP AI Studio</div>
+        <nav class="top-links" aria-label="Primary links">
+          <a href="index.html">Weaviate Home</a>
+          <a href="https://open-vsx.org/extension/harishkaparwan/mcp-ai-studio" target="_blank" rel="noopener noreferrer">Open VSX</a>
+        </nav>
+      </header>
+
+      <section class="hero hero-compact">
+        <h1>MCP AI Studio</h1>
+        <p>Connect, inspect, and operate any Streamable HTTP MCP server directly inside VS Code or Windsurf.</p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="cta" href="https://open-vsx.org/extension/harishkaparwan/mcp-ai-studio" target="_blank" rel="noopener noreferrer">Install from Open VSX</a>
+        </div>
+      </section>
+
+      <section class="feature-grid" aria-label="MCP AI Studio overview">
+        <article class="section-card">
+          <h2>What it does</h2>
+          <p>MCP AI Studio embeds a full MCP client in an editor webview. Point it at any server URL, discover tools, run calls with generated forms, and inspect responses without leaving your editor.</p>
+          <ul class="checklist">
+            <li><strong>Connect to any MCP server:</strong> enter any URL and restore it on next open.</li>
+            <li><strong>Discover and call tools:</strong> input forms are auto-generated from JSON Schema.</li>
+            <li><strong>Inspect responses:</strong> JSON output is formatted and copy-ready.</li>
+          </ul>
+        </article>
+
+        <article class="section-card">
+          <h2>Quick start</h2>
+          <ul class="checklist">
+            <li>Install the extension and open the MCP AI Studio workbench.</li>
+            <li>Open Configurator and set your MCP server URL.</li>
+            <li>Save and connect, then browse and call tools.</li>
+          </ul>
+          <div class="path-note">Typical URL: http://localhost:&lt;port&gt;/mcp or https://your-server.com/mcp</div>
+        </article>
+
+        <article class="section-card">
+          <h2>Configuration</h2>
+          <p>Set values via Settings UI or settings.json. Workspace settings apply per project.</p>
+          <pre class="code-box">{
+  "mcpAiStudio.serverUrl": "http://localhost:8080/mcp",
+  "mcpAiStudio.title": "My Project Tools",
+  "mcpAiStudio.subtitle": "Powered by Spring AI MCP",
+  "mcpAiStudio.clientName": "my-project",
+  "mcpAiStudio.clientVersion": "1.0.0"
+}</pre>
+        </article>
+
+        <article class="section-card">
+          <h2>Compatibility</h2>
+          <p>Works with servers implementing MCP Streamable HTTP, including Spring AI MCP, FastMCP, Node SDK based servers, and any endpoint supporting tools/list and tools/call.</p>
+          <div class="settings-grid">
+            <div class="settings-row"><span class="k">mcpAiStudio.serverUrl</span><span class="v">MCP server URL prefilled on open.</span></div>
+            <div class="settings-row"><span class="k">mcpAiStudio.title</span><span class="v">Title shown in the workbench header.</span></div>
+            <div class="settings-row"><span class="k">mcpAiStudio.clientName</span><span class="v">Client name sent in MCP initialize handshake.</span></div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
