@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="__variable_dd5b2f __variable_595324 h-full antialiased">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weaviate UI Downloads | Desktop Applications</title>
+    <meta name="description" content="Download Weaviate UI desktop applications for Windows and macOS. Native desktop apps with full functionality.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="/_next/static/css/b88038df200c2543.css">
+    <style>
+        .downloads-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        .downloads-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .downloads-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .downloads-header p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .platform-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .platform-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .platform-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .platform-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #e5e7eb;
+        }
+        .platform-description {
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+        }
+        .download-list {
+            space-y: 1rem;
+        }
+        .download-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            transition: background-color 0.2s ease;
+        }
+        .download-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .download-info {
+            flex: 1;
+        }
+        .download-name {
+            font-weight: 600;
+            color: #e5e7eb;
+            margin-bottom: 0.25rem;
+        }
+        .download-size {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        .download-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .download-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        .requirements {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .requirements h4 {
+            color: #e5e7eb;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .requirements ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .requirements li {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #9ca3af;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover {
+            color: #e5e7eb;
+        }
+        .version-badge {
+            background: rgba(102, 126, 234, 0.2);
+            color: #a5b4fc;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        @media (max-width: 768px) {
+            .downloads-container {
+                padding: 1rem;
+            }
+            .downloads-header h1 {
+                font-size: 2rem;
+            }
+            .platform-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+    <nav id="hpNav" aria-label="Site navigation">
+        <button id="hpNavBtn" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+        </button>
+        <div id="hpNavMenu" role="menu">
+            <a href="/#articles" role="menuitem">Article</a>
+            <button id="hpNavPluginsToggle" aria-expanded="false" type="button">
+                Plugins <span class="hpCaret">▸</span>
+            </button>
+            <div id="hpNavPlugins">
+                <a href="https://harishkaparwan.github.io/mcp-ai-studio/" target="_blank" rel="noopener noreferrer">MCP AI Studio</a>
+                <a href="https://harishkaparwan.github.io/weaviate-ui/" target="_blank" rel="noopener noreferrer">Weaviate UI</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="downloads-container">
+        <a href="/" class="back-link">
+            ← Back to Portfolio
+        </a>
+        
+        <div class="downloads-header">
+            <div class="version-badge">Version 2.0.0</div>
+            <h1>Weaviate UI Downloads</h1>
+            <p>Native desktop applications for Weaviate UI with full functionality and offline support.</p>
+        </div>
+
+        <div class="platform-grid">
+            <!-- Windows Platform -->
+            <div class="platform-card">
+                <div class="platform-icon">🪟</div>
+                <h2 class="platform-title">Windows</h2>
+                <p class="platform-description">Native Windows applications with installer support.</p>
+                
+                <div class="download-list">
+                    <div class="download-item">
+                        <div class="download-info">
+                            <div class="download-name">weaviate-ui_2.0.0_x64-setup.exe</div>
+                            <div class="download-size">91.6 MB • NSIS Installer</div>
+                        </div>
+                        <a href="/weaviate-ui/desktop/2.0.0/win/weaviate-ui_2.0.0_x64-setup.exe" class="download-button">
+                            Download
+                        </a>
+                    </div>
+                    
+                    <div class="download-item">
+                        <div class="download-info">
+                            <div class="download-name">weaviate-ui_2.0.0_x64_en-US.msi</div>
+                            <div class="download-size">94.5 MB • Microsoft Installer</div>
+                        </div>
+                        <a href="/weaviate-ui/desktop/2.0.0/win/weaviate-ui_2.0.0_x64_en-US.msi" class="download-button">
+                            Download
+                        </a>
+                    </div>
+                </div>
+
+                <div class="requirements">
+                    <h4>System Requirements</h4>
+                    <ul>
+                        <li>• Windows 10 or later (x64)</li>
+                        <li>• 2 GB RAM minimum</li>
+                        <li>• 200 MB free disk space</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- macOS Platform -->
+            <div class="platform-card">
+                <div class="platform-icon">🍎</div>
+                <h2 class="platform-title">macOS</h2>
+                <p class="platform-description">Native macOS application for Apple Silicon and Intel Macs.</p>
+                
+                <div class="download-list">
+                    <div class="download-item">
+                        <div class="download-info">
+                            <div class="download-name">weaviate-ui_2.0.0_aarch64.dmg</div>
+                            <div class="download-size">126 MB • Apple Silicon</div>
+                        </div>
+                        <a href="/weaviate-ui/desktop/2.0.0/mac/weaviate-ui_2.0.0_aarch64.dmg" class="download-button">
+                            Download
+                        </a>
+                    </div>
+                </div>
+
+                <div class="requirements">
+                    <h4>System Requirements</h4>
+                    <ul>
+                        <li>• macOS 11.0 or later</li>
+                        <li>• Apple Silicon (M1/M2/M3) recommended</li>
+                        <li>• 200 MB free disk space</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <h3 style="color: #e5e7eb; margin-bottom: 1rem;">Installation Instructions</h3>
+            <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
+                    <h4 style="color: #a5b4fc; margin-bottom: 1rem;">🪟 Windows</h4>
+                    <ol style="color: #9ca3af; line-height: 1.6;">
+                        <li>Download the .exe or .msi file from above</li>
+                        <li>Double-click the installer to run it</li>
+                        <li>Follow the installation wizard</li>
+                        <li>Launch Weaviate UI from your Start menu</li>
+                    </ol>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 2rem;">
+                    <h4 style="color: #a5b4fc; margin-bottom: 1rem;">🍎 macOS</h4>
+                    <ol style="color: #9ca3af; line-height: 1.6;">
+                        <li>Download the DMG file from above</li>
+                        <li>Double-click the DMG file to mount it</li>
+                        <li>Drag the Weaviate UI application to your Applications folder</li>
+                        <li>Launch Weaviate UI from your Applications folder</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation script (copied from main site)
+        (function(){
+            var nav=document.getElementById("hpNav"),
+                btn=document.getElementById("hpNavBtn"),
+                toggle=document.getElementById("hpNavPluginsToggle"),
+                plugins=document.getElementById("hpNavPlugins");
+            if(!nav||!btn||!toggle||!plugins)return;
+            btn.addEventListener("click",function(e){
+                e.stopPropagation();
+                var open=nav.classList.toggle("open");
+                btn.setAttribute("aria-expanded",open?"true":"false")
+            });
+            toggle.addEventListener("click",function(e){
+                e.stopPropagation();
+                var open=plugins.classList.toggle("open");
+                toggle.setAttribute("aria-expanded",open?"true":"false")
+            });
+            document.addEventListener("click",function(e){
+                if(!nav.contains(e.target)){
+                    nav.classList.remove("open");
+                    plugins.classList.remove("open");
+                    btn.setAttribute("aria-expanded","false");
+                    toggle.setAttribute("aria-expanded","false")
+                }
+            })
+        })();
+    </script>
+</body>
+</html>
